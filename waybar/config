@@ -1,0 +1,57 @@
+{
+    "layer": "top",
+	"position": "bottom",
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["custom/prev", "custom/play", "custom/next"],
+    "modules-right": ["network", "battery", "clock", "custom/whitespace", "custom/power"],
+"sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "📈",
+        "5": "💼",
+        "6": "6",
+        "7": "💀",
+        "8": "8",
+        "9": "9",
+        "10": "10",
+        "urgent": "!",
+        "default": ":3"
+    }
+},
+
+
+	"pulseaudio": {
+        "format": "🔊",
+		"on-click": "pavucontrol"
+	},
+	"network": {
+		"format-wifi": "📡",
+		"format-disconnected": "Disconnected",
+        "on-click": "nmtui"
+	},
+    "battery": {
+        "format": "{icon}",
+        "format-icons": ["💔", "🔋", "🫀", "💕", "♥️"],
+        "on-click": "echo asd > dunstify -r '991030' 'Capacity:' a{capacity}"
+
+    },
+
+    "custom/power": {
+    "format": " 🚪 ",
+    "on-click": "wlogout",
+    "tooltip": false
+},
+
+    "clock": {
+        "format": "{:%a %d %b %H:%M}"
+    },
+
+    "custom/whitespace": {
+        "format": " "
+    }
+}
