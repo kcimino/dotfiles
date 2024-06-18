@@ -36,6 +36,32 @@
 %i
 " :empty-lines 1 )
 
+;; Recipes
+("r" "Recipe" entry
+      (file+headline "~/org/Health/Recipebook.org" "Unsorted recipes:")
+      "* NEVERMADE %? :weekday:
+:PROPERTIES:
+:Author:
+:Source:
+:Sent_by:
+:Yield:
+:Prep_Time:
+:Cook_Time:
+:Total_Time:
+:Tools:
+:Cost:
+:Description:
+:URL:
+:Added: %u
+:END:
+
+-[ ] Ingredient 1
+
+1. Step 1
+
+Notes:")
+
+
         ;; Notes
 ("n" "Notes")
 
