@@ -17,6 +17,8 @@
 (after! org
 (setq org-list-allow-alphabetical t)
 (setq org-list-demote-modify-bullet '(("+" . "-") ("-" . "+") ("*" . "+") ("1." . "a.")))
+(setq org-ellipsis " ▼")
+
 )
 ;;org-pretty-entities t
 (after! org
