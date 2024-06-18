@@ -91,6 +91,8 @@
 
 (load! "+aes.el")
 
+(load! "+agenda.el")
+
 (load! "+org-roam.el")
 
 (load! "+org-modern.el")
