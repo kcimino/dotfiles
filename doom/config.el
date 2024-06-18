@@ -91,5 +91,7 @@
 
 (load! "+aes.el")
 
+(load! "+org-roam.el")
+
 (load! "+org-modern.el")
 (load! "+misc.el")
