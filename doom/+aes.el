@@ -2,6 +2,8 @@
 
 (add-hook 'org-mode-hook 'org-modern-mode)
 
+;; Nyan!
+(nyan-mode)
 
 ;; Emphasis stuff
 (setq org-hide-emphasis-markers t)
