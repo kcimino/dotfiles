@@ -22,21 +22,25 @@
 
 
 ;;(provide '+org-modern)
-
 (add-hook 'org-mode-hook 'org-modern-mode)
 ;; Fix org Modern
-
+;;(with-eval-after-load 'org (global-org-modern-mode))
 
  (custom-set-faces!
    `(+org-todo-eventually ((:background ,(doom-color 'magenta)
-                            :foreground (doom-color ,(doom-color'dark-cyan)))))
-  )
+                            :foreground (doom-color ,(doom-color'dark-cyan))))))
 
-(use-package! org-modern
- :hook (org-mode . org-modern-mode)
- :config
- (setq org-modern-star '("◉" "○" "✸" "✿" "✤" "◆" "▶" "◉" "○" "✸" "✿" "✤" "◆" "▶")
-  org-modern-todo-faces
+;; Of potential use if I need to extend this even more https://www.unicode.org/charts/PDF/U1F780.pdf
+ ;; and https://www.keynotesupport.com/internet/special-characters-arrows.shtml
+
+(after! org-modern
+;; :hook (org-mode . org-modern-mode)
+;; :config
+  (setq org-modern-replace-stars '("◉" "○" "♠" "♤" "♣" "♧" "♥" "♡" "♦" "♢" "★" "✰" "✪" "❣" "•" "◘" "◆" "✦" "✸" "✿" "♪" "♫" "∞" )
+;; llama mode
+  ;; org-modern-replace-stars '("🦙","🦆","🧀","🍰","📱","🧱","🥔","🍄","🌳","⌂","🎂","🟠","◑")
+;;   org-modern-star '("❍","●","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","")
+        org-modern-todo-faces
    '(
      ( "[X]" :inverse-video t :inherit +org-todo-cancel )
      ( "DONE" :inverse-video t :inherit +org-todo-cancel )
@@ -53,7 +57,7 @@
      ("NOTES" :inverse-video t :inherit +org-todo-active)
      ("SUMMARIZE" :inverse-video t :inhereit +org-todo-active)
 
-     ("[ ]" :inherit +org-todo-eventually)
+     ("[ ]" :inverse-video t :inherit +org-todo-eventually)
      ("IDEA" :inverse-video t :inherit +org-todo-eventually)
      ("LATER" :inverse-video t :inherit +org-todo-eventually)
 
