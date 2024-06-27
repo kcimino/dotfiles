@@ -23,6 +23,7 @@
 
 ;;(provide '+org-modern)
 
+(add-hook 'org-mode-hook 'org-modern-mode)
 ;; Fix org Modern
 
 

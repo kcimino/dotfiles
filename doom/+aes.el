@@ -1,7 +1,5 @@
 ;;; +aes.el -*- lexical-binding: t; -*-
 
-(add-hook 'org-mode-hook 'org-modern-mode)
-
 ;; Nyan!
 (nyan-mode)
 
