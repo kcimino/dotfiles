@@ -11,7 +11,8 @@
 
 ;; Have all of the files in the org directory in the agenda
 (setq org-agenda-files '("~/org/"
-                         "~/org/GTD/"))
+                         "~/org/GTD/"
+                         "~/org/daily/"))
 
 ;; Warn 5 days before a deadline
 (setq org-deadline-warning-days 5)
