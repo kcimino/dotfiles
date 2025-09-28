@@ -24,3 +24,24 @@
 ;;  (setq fancy-splash-image
 ;;        (concat doom-private-dir "splash/"
 ;;                (nth (random (length alternatives)) alternatives))))
+
+
+;; In org-roam weekly:
+;;
+;;* Buckets
+;;** Sharpen
+;;2 wo/run + movie + game + read
+;;⬜ ⬜ ⬜ ⬜
+;;** Create
+;;Blog + Book
+;;⬜ ⬜
+
+;;** Learn
+;;Astro + COMA Airflow + Rust
+;;⬜ ⬜ ⬜
+;;** Review, Plan, Prune
+;;Buckets + Weekly Review
+;;✅ ⬜
+(setq org-modern-replace-stars '("◉" "○" "◔" "◓" "◐" "◒" "◑" "♠" "♣" "♥" "♦" "+" "•" "◘" "░" "▒" "▓" "█" "⦾" "✰" "✸" "◆" "✿" "★" "✦" "✪" ))
+ (setq org-modern-replace-stars '("+""○""✸""✿""✤""◆""◉""○""✸""✿""✤""◆")
+ ❥
