@@ -26,9 +26,15 @@
 ;; Fix org Modern
 ;;(with-eval-after-load 'org (global-org-modern-mode))
 
- (custom-set-faces!
-   `(+org-todo-eventually ((:background ,(doom-color 'magenta)
-                            :foreground (doom-color ,(doom-color'dark-cyan))))))
+;; (custom-set-faces
+;;   `(+org-todo-eventually ((:background "red"
+;;                            :foreground "yellow"))))
+
+
+
+
+;;(defface +org-todo-eventually
+;;  '((t (:foreground "gray" :background "red"))) nil)
 
 ;; Of potential use if I need to extend this even more https://www.unicode.org/charts/PDF/U1F780.pdf
  ;; and https://www.keynotesupport.com/internet/special-characters-arrows.shtml
@@ -36,43 +42,51 @@
 (after! org-modern
 ;; :hook (org-mode . org-modern-mode)
 ;; :config
-  (setq org-modern-replace-stars '("◉" "○" "♠" "♤" "♣" "♧" "♥" "♡" "♦" "♢" "★" "✰" "✪" "❣" "•" "◘" "◆" "✦" "✸" "✿" "♪" "♫" "∞" )
+
+  (setq org-modern-star '("◉" "○" "♠" "♤" "♣" "♧" "♥" "♡" "♦" "♢" "★" "✰" "✪" "❣" "•" "◘" "◆" "✦" "✸" "✿" "♪" "♫" "∞" )
 ;; llama mode
   ;; org-modern-replace-stars '("🦙","🦆","🧀","🍰","📱","🧱","🥔","🍄","🌳","⌂","🎂","🟠","◑")
 ;;   org-modern-star '("❍","●","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","")
+
+;;      org-tags-column 0
+        org-hide-emphasis-markers t
+        org-modern-priority
+        (quote ((?A . "🦙")
+                (?B . "🦆")
+                (?C . "🧀")))
+
         org-modern-todo-faces
    '(
-     ( "[X]" :inverse-video t :inherit +org-todo-cancel )
-     ( "DONE" :inverse-video t :inherit +org-todo-cancel )
-     ( "SKIP" :inverse-video t :inherit +org-todo-cancel )
-     ( "CANCELLED" :inverse-video t :inherit +org-todo-cancel )
-     ( "IGNORE" :inverse-video t :inherit +org-todo-cancel )
+     ("[X]" :inverse-video t :inherit +org-todo-cancel)
+     ("DONE" :inverse-video t :inherit +org-todo-cancel)
+     ("SKIP" :inverse-video t :inherit +org-todo-cancel)
+     ("CANCELLED" :inverse-video t :inherit +org-todo-cancel)
+     ("IGNORE" :inverse-video t :inherit +org-todo-cancel)
+     ("MET" :inverse-video t :inherit +org-todo-cancel)
 
-     ( "PROJ" :inverse-video t  :inherit +org-todo-project  )
-     ( "LOOP" :inverse-video t  :inherit +org-todo-project  )
+     ("PROJ" :inverse-video t  :inherit +org-todo-project)
+     ("LOOP" :inverse-video t  :inherit +org-todo-project)
 
-     ( "[-]" :inverse-video t :inherit +org-todo-active )
+     ("[-]" :inverse-video t :inherit +org-todo-active)
      ("STARTED" :inverse-video t :inherit +org-todo-active)
      ("READING" :inverse-video t :inherit +org-todo-active)
      ("NOTES" :inverse-video t :inherit +org-todo-active)
-     ("SUMMARIZE" :inverse-video t :inhereit +org-todo-active)
+     ("SUMMARIZE" :inverse-video t :inherit +org-todo-active)
 
-     ("[ ]" :inverse-video t :inherit +org-todo-eventually)
-     ("IDEA" :inverse-video t :inherit +org-todo-eventually)
-     ("LATER" :inverse-video t :inherit +org-todo-eventually)
+     ("[ ]" :inherit +org-todo-onhold );; :background "red" :foreground "blue")
+     ("IDEA" :inherit +org-todo-onhold);; :inverse-video t :inherit org-todo-eventually)
+     ("LATER" :inherit +org-todo-onhold);; :inverse-video t :inherit +org-todo-eventually)
 
      ("[?]" :inverse-video t :inherit +org-todo-onhold)
-     ("WAIT" :inherit +org-todo-onhold)
+     ("WAIT" :inverse-video t :inherit +org-todo-onhold)
+     ("SENT" :inverse-video t :inherit +org-todo-onhold)
 
      ("HOLD" :inverse-video t :inherit +org-todo-cancel)
      ("PILL" :inverse-video t :inherit +org-todo-cancel)
 
      ("TODO" :inverse-video t :inherit org-modern-todo)
      ("MEETING" :inverse-video t :inherit org-modern-todo)
-     ("READ" :inverse-video t :inherit org-modern-todo)
-     )
-   )
- )
+     ("READ" :inverse-video t :inherit org-modern-todo))))
 
 
 
