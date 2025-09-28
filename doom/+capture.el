@@ -32,18 +32,22 @@
                                :jump-to-captured t)
 ;; Tasks
 ("t" "Task" entry (file+datetree "~/org/Inbox.org")
-"** %^{STATUS|TODO|STARTED|LATER|IDEA|MEETING|DONE} %^g
+"** %^{STATUS|TODO|STARTED|LATER|IDEA|MEETING|DONE} :%^{context||@home|@work|@laptop|@email|@call|@windows}:%^{}g:
+:PROPERTIES:
+:captured: %u
+:END:
 %i
 " :empty-lines 1 )
 
 ;; Recipes
 ("r" "Recipe" entry
-      (file+headline "~/org/Health/Recipebook.org" "Unsorted recipes:")
+      (file+headline "~/org/References/Health/Recipebook.org" "Unsorted recipes:")
       "* NEVERMADE %? :weekday:
 :PROPERTIES:
 :Author:
 :Source:
 :Sent_by:
+:Personal_Rating:
 :Yield:
 :Prep_Time:
 :Cook_Time:
@@ -82,7 +86,8 @@ related to: %a
 )
 
         ;; Meetings
-("nm" "Meeting Notes" entry (file+olp "~/org/meetings.org" "Unorganized")
+;;("nm" "Meeting Notes" entry (file+olp "~/org/meetings.org" "Unorganized")
+("nm" "Meeting Notes" item (file+datetree "~/org/Inbox/Meetings.org")
 "** Meeting about %\\1 %u
 :PROPERTIES:
 :Topic: %^{topics}
@@ -101,7 +106,7 @@ related to: %a
 
 ***** Notes
 
-" :empty-lines 1
+" :empty-lines 1 :time-prompt t
 )
         ;; Media
 ("nM" "Notes on media" entry (file "~/org/Media/Unorganized.org")
