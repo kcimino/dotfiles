@@ -23,6 +23,7 @@
          "DONE(d)"                      ; Task successfully completed
          "SKIP(k)"                      ; Skipped a recurring task
          "CANCELLED(c)"                 ; Task was cancelled, aborted or is no longer applicable
+         "MET(M)"                       ; Meeting was held
          ;; "KILL(k)"
          ;;     ;;
          )
