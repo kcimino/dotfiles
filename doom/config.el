@@ -29,7 +29,7 @@
 ;; refresh your font settings. If Emacs still can't find your font, it likely
 ;; wasn't installed correctly. Font issues are rarely Doom issues!
 
-(set-face-attribute 'default nil :height 170)
+
 
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
@@ -91,9 +91,19 @@
 
 (load! "+aes.el")
 
+;; half of files
+
 (load! "+agenda.el")
 
 (load! "+org-roam.el")
 
 (load! "+org-modern.el")
+
 (load! "+misc.el")
+
+;; New file
+
+;;(load! "+email.el")
+
+;; Not sure this is right, but going based off of https://github.com/doomemacs/doomemacs/issues/3842
+;;(use-package org-visual-indent)
